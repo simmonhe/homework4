@@ -1,0 +1,103 @@
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+    }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  header img {
+    animation: none;
+  }
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  header img {
+    animation: fadeInAnimation;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+  }
+}
+
+
+
+@media all and (max-width: 700px){
+  header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pricing{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    flex-direction: row;
+  }
+
+  .gallery{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .card{
+    width: 100%;
+  }
+
+  /* img{
+    width: 100%;
+  } */
+}
+
+
+@media all and (min-width: 700px){
+  header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header img{
+    width: 400px;
+    height: auto;
+  }
+
+  nav{
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+  }
+
+  .nav_links{
+    display: flex;
+    flex-direction: row;
+  }
+  .pricing{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    flex-direction: row;
+  }
+
+  .card{
+    width: 300px;
+  }
+
+  .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .gallery img{
+    width:300px;
+  }
+}
+
